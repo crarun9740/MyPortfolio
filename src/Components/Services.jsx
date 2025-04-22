@@ -60,7 +60,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="mt-30 ml-30">
+      <div className="mt-20 ml-21">
         <Social />
       </div>
     </>
