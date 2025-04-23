@@ -1,11 +1,10 @@
 import React from "react";
 import { FaLaptopCode, FaChartBar, FaCode } from "react-icons/fa";
-import Social from "../../../Common/Social";
 
 const Services = () => {
   return (
     <>
-      <div className="w-full py-16 bg-black text-white">
+      <div className="w-full min-h-[75vh] py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-start items-center gap-8">
             <h2 className="font-semibold text-3xl text-blue-200 hover:text-blue-500 transition-colors duration-300 cursor-pointer">
@@ -59,9 +58,6 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mt-20 ml-21">
-        <Social />
       </div>
     </>
   );
