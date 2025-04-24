@@ -58,6 +58,9 @@ const Home = () => {
       <div className="mt-[4rem]">
         <About />
       </div>
+      <div>
+        <Services />
+      </div>
     </>
   );
 };

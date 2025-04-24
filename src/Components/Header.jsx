@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="w-full fixed top-0 right-0 z-50 px-10 py-5 flex justify-between items-center rounded-1xl bg-gray-950 ">
-      <span className="text-gray-500 text-xl hover:text-blue-500  cursor-pointer ml-10 ">
+      <Link
+        to="/"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="text-gray-500 text-xl hover:text-blue-500  cursor-pointer ml-10 "
+      >
         Arun Ramesh Chavan.
-      </span>
+      </Link>
 
       <nav className="flex gap-7 text-gray-400 text-lg pr-10">
         <Link
@@ -35,9 +39,12 @@ const Header = () => {
         </Link>
 
         <div className="">
-          <span className="bg-blue-500 text-white rounded-3xl p-3 transform transition-all duration-200 cursor-pointer hover:underline ">
+          <Link
+            to="/contact"
+            className="bg-blue-500 text-white rounded-3xl p-3 transform transition-all duration-200 cursor-pointer hover:underline "
+          >
             Contact me
-          </span>
+          </Link>
         </div>
       </nav>
     </div>
