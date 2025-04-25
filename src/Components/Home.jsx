@@ -9,6 +9,7 @@ import Icons from "./Icons";
 import Services from "./Services";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -61,6 +62,10 @@ const Home = () => {
       <div>
         <Services />
       </div>
+      <div>
+        <Projects />
+      </div>
+      <Contact />
     </>
   );
 };

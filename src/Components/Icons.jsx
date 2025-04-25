@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaHackerrank } from "react-icons/fa";
 
 const Icons = () => {
   return (
-    <div className="flex flex-row mt-5 mb-5 text-3xl gap-5">
+    <div className="flex flex-row mt-5 mb-5 text-3xl gap-5 text-blue-300">
       <a
         href="https://www.linkedin.com/in/arun-ramesh-chavan/"
         target="_blank"
