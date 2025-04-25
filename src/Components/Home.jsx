@@ -10,6 +10,7 @@ import Services from "./Services";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -35,12 +36,16 @@ const Home = () => {
             </p>
 
             <div className="flex flex-row gap-5 ">
-              <button className="flex items-center gap-2 bg-gray-700 hover:bg-blue-500 text-white px-5 py-2 rounded-full transition mt-10 cursor-pointer">
-                <FaBriefcase /> Hire Me
-              </button>
-              <button className="flex items-center gap-2 bg-gray-700 hover:bg-blue-500 text-white px-5 py-2 rounded-full transition mt-10 cursor-pointer">
-                <FaEnvelope /> Email Me
-              </button>
+              <Link to="/Contact">
+                <button className="flex items-center gap-2 bg-gray-700 hover:bg-blue-500 text-white px-5 py-2 rounded-full transition mt-10 cursor-pointer">
+                  <FaBriefcase /> Hire Me
+                </button>
+              </Link>
+              <Link to="/Contact">
+                <button className="flex items-center gap-2 bg-gray-700 hover:bg-blue-500 text-white px-5 py-2 rounded-full transition mt-10 cursor-pointer">
+                  <FaEnvelope /> Email Me
+                </button>
+              </Link>
             </div>
           </div>
 
