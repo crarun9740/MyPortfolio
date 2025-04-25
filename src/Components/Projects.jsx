@@ -126,11 +126,11 @@ export default function Projects() {
 
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
-        <div className="mb-16  m-10 grid grid-col-1  ">
-          <h2 className="text-2xl font-semibold mb-8 flex items-center">
+        <div className="mb-16 px-4 md:px-10">
+          <h2 className="text-2xl font-semibold mb-8 flex items-center justify-center md:justify-start">
             <FaStar className="mr-2 text-yellow-400" /> Featured Projects
           </h2>
-          <div className="grid grid-cols-1 gap-8 w-[27rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {featuredProjects.map((project) => (
               <FeaturedProjectCard key={project.id} project={project} />
             ))}
