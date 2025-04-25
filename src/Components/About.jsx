@@ -85,9 +85,11 @@ const AboutMe = () => {
                 className="text-gray-500 pl-3 flex justify-center item text-sm mb-2"
               >
                 <div className="w-80 h-29 border-1 ml-1 flex flex-col gap-2 bg-gray-900 text-white justify-start p-2 rounded-2xl hover:border-blue-500">
-                  <span>2019-2020</span>
+                  <span>2008-2018</span>
                   <span>Tungal Independent PU Science College Bijapur </span>
-                  <span className="">Pre-University Course</span>
+                  <span className="">
+                    SSLC(Secondary School Leaving Certificate)
+                  </span>
                 </div>
               </motion.div>
             </div>
@@ -116,7 +118,7 @@ const AboutMe = () => {
               >
                 <div className="w-80 h-29 border-1 ml-1 flex flex-col gap-2 bg-gray-900 text-white justify-start p-2 rounded-2xl hover:border-blue-500">
                   <span>2019-2020</span>
-                  <span>Tungal Independent PU Science College Bijapur </span>
+                  <span> Tungal Independent PU Science College Bijapur </span>
                   <span className="">Pre-University Course</span>
                 </div>
               </motion.div>
