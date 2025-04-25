@@ -1,7 +1,4 @@
 import React from "react";
-import Myphoto from "/assets/Programming.png";
-import Myphoto2 from "/assets/Ai.png";
-import Myphoto3 from "/assets/Data.png";
 import { FaEnvelope, FaBriefcase } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "./variant";
