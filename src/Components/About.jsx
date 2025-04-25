@@ -210,9 +210,9 @@ const AboutMe = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="ml-20 mt-10">
-        <Icons />
+        <div className="ml-20 mt-20">
+          <Icons />
+        </div>
       </div>
     </>
   );

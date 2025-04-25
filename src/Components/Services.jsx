@@ -5,10 +5,10 @@ import Icons from "./Icons";
 const Services = () => {
   return (
     <>
-      <div className="w-full min-h-[75vh] py-16 bg-black text-white mt-30">
+      <div className="w-full min-h-[75vh] py-16 bg-black text-white ">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-start items-center gap-8">
-            <h2 className="font-semibold text-3xl text-blue-200  transition-colors duration-300 cursor-pointer">
+            <h2 className="font-semibold text-3xl text-blue-200  transition-colors duration-300 cursor-pointer mb-20">
               <span className="text-blue-500"> My </span>Services
             </h2>
 
