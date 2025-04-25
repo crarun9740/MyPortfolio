@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
     <>
-      <div className="bg-black text-white px-6 py-12 min-h-screen">
+      <div className=" text-white px-6 py-12 min-h-screen bg-gray-950">
         {/* About Section */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center items-center ">

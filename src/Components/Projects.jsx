@@ -45,7 +45,7 @@ export default function Projects() {
       description:
         "It features a simple two-player gameplay mechanic, with real-time move updates and a restart option, making it an enjoyable experience.",
       image: "/assets/tic-tac-toe.jpg",
-      technologies: ["HTML", "CSS", "JS"],
+      technologies: ["HTML", "CSS", "JavaScript"],
       projectUrl: "https://app.netlify.com/sites/arun-tictactoe/overview",
       sourceCodeUrl: "https://github.com/crarun9740/Tic-Tac-Toe",
     },
@@ -126,11 +126,11 @@ export default function Projects() {
 
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
-        <div className="mb-16 w-[900px] m-10 ">
+        <div className="mb-16  m-10 grid grid-col-1  ">
           <h2 className="text-2xl font-semibold mb-8 flex items-center">
             <FaStar className="mr-2 text-yellow-400" /> Featured Projects
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 w-[27rem]">
             {featuredProjects.map((project) => (
               <FeaturedProjectCard key={project.id} project={project} />
             ))}

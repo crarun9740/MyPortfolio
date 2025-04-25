@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">
           <span className="text-white">Get in </span>
