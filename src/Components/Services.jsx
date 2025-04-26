@@ -1,68 +1,175 @@
 import React from "react";
-import { FaLaptopCode, FaChartBar, FaCode } from "react-icons/fa";
+import {
+  FaLaptopCode,
+  FaChartBar,
+  FaCode,
+  FaServer,
+  FaMobileAlt,
+  FaBrain,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 import Icons from "./Icons";
 
 const Services = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const services = [
+    {
+      icon: <FaLaptopCode className="text-5xl" />,
+      title: "Frontend Development",
+      description:
+        "I create visually appealing, user-friendly interfaces using HTML, CSS, JavaScript, React, and Tailwind CSS.",
+      color: "from-blue-600 to-cyan-400",
+    },
+    {
+      icon: <FaServer className="text-5xl" />,
+      title: "Fullstack Web Development",
+      description:
+        "I design clean and dynamic user interfaces with React while building secure and scalable backends with Node.js and MongoDB.",
+      color: "from-indigo-600 to-purple-500",
+    },
+    {
+      icon: <FaChartBar className="text-5xl" />,
+      title: "Data Visualization & Dashboards",
+      description:
+        "I create interactive data visualizations and dashboards using Tablue and PowerBI. I help turn raw data into meaningful insights.",
+      color: "from-emerald-500 to-teal-400",
+    },
+    {
+      icon: <FaMobileAlt className="text-5xl" />,
+      title: "Responsive Web Design",
+      description:
+        "I develop websites that work beautifully on all devices, ensuring optimal user experience on desktops, tablets, and mobile phones.",
+      color: "from-rose-500 to-pink-500",
+    },
+  ];
+
   return (
-    <>
-      <div className="w-full min-h-[75vh] py-16 bg-black text-white ">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col justify-start items-center gap-8">
-            <h2 className="font-semibold text-3xl text-blue-200  transition-colors duration-300 cursor-pointer mb-20">
-              <span className="text-blue-500"> My </span>Services
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
-              {/* Fullstack Web-Development */}
-              <div className="border-gray-700 border-2 rounded-2xl flex flex-col justify-center items-center p-6 hover:shadow-xl hover:shadow-blue-900/20 hover:border-blue-500/50 transition duration-300 cursor-pointer bg-black/40">
-                <span className="text-blue-500 text-4xl mb-4">
-                  <FaLaptopCode />
-                </span>
-                <h3 className="font-semibold text-xl text-blue-200 mb-3">
-                  Frontend Development
-                </h3>
-                <p className="text-gray-300">
-                  I create visually appealing, user-friendly interfaces using
-                  HTML, CSS, JavaScript, React, and Tailwind CSS.
-                </p>
-              </div>
-
-              <div className="border-gray-700 border-2 rounded-2xl flex flex-col justify-center items-center p-6 hover:shadow-xl hover:shadow-blue-900/20 hover:border-blue-500/50 transition duration-300 cursor-pointer bg-black/40">
-                <span className="text-blue-500 text-4xl mb-4">
-                  <FaLaptopCode />
-                </span>
-                <h3 className="font-semibold text-xl text-blue-200 mb-3">
-                  Fullstack Web-Development
-                </h3>
-                <p className="text-gray-300">
-                  I design clean and dynamic user interfaces with HTML, CSS,
-                  JavaScript, and React. I also build secure and scalable
-                  backends with Node.js and MongoDB.
-                </p>
-              </div>
-
-              {/* Data Visualization & Dashboards */}
-              <div className="border-gray-700 border-2 rounded-2xl flex flex-col justify-center items-center p-6 hover:shadow-xl hover:shadow-blue-900/20 hover:border-blue-500/50 transition duration-300 cursor-pointer bg-black/40">
-                <span className="text-blue-500 text-4xl mb-4">
-                  <FaChartBar />
-                </span>
-                <h3 className="font-semibold text-xl text-blue-200 mb-3">
-                  Data Visualization & Dashboards
-                </h3>
-                <p className="text-gray-300">
-                  I create interactive data visualizations and dashboards using
-                  Tablue and PowerBI. I help turn raw data into meaningful
-                  insights.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="ml-20 mt-20">
-          <Icons />
-        </div>
+    <div className="w-full min-h-screen py-24 bg-gradient-to-b from-black to-gray-900 text-white relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 -left-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
-    </>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-blue-500">My</span> Services
+          </h2>
+          <div className="h-1 w-24 bg-blue-500 rounded-full"></div>
+          <p className="mt-6 text-lg text-gray-300 max-w-2xl text-center">
+            I offer comprehensive solutions tailored to your unique needs,
+            combining cutting-edge technology with creative design.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="group relative overflow-hidden rounded-2xl"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl"></div>
+              <div className="relative backdrop-blur-sm bg-gray-900/40 border border-gray-800 rounded-2xl p-8 h-full flex flex-col transition-all duration-300 group-hover:translate-y-[-5px] group-hover:shadow-lg group-hover:shadow-blue-900/20 group-hover:border-blue-500/30">
+                <div
+                  className={`w-16 h-16 rounded-full mb-6 flex items-center justify-center bg-gradient-to-br ${service.color} p-3`}
+                >
+                  {service.icon}
+                </div>
+                <h3 className="font-bold text-xl text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 flex-grow">{service.description}</p>
+                <div className="mt-6 pt-4 border-t border-gray-800/50">
+                  <button className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                    <span>Learn more</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-20 flex justify-center"
+        >
+          <div className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 p-[1px] rounded-full overflow-hidden">
+            <button className="bg-gray-900 hover:bg-gray-800 text-white font-medium px-8 py-3 rounded-full transition-colors duration-300 flex items-center gap-2">
+              <span>Request Custom Service</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </button>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="mt-24">
+        <Icons />
+      </div>
+    </div>
   );
 };
 
