@@ -43,7 +43,7 @@ export default function Projects() {
         "Simple two-player game with real-time move updates and restart option.",
       image: "/assets/tic-tac-toe.jpg",
       technologies: ["HTML", "CSS", "JavaScript"],
-      projectUrl: "https://arun-tictactoe.netlify.app/",
+      projectUrl: "https://arun-tic-tac-toe.netlify.app/",
       sourceCodeUrl: "https://github.com/crarun9740/Tic-Tac-Toe",
     },
     {
