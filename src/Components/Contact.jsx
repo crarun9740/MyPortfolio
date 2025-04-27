@@ -5,25 +5,55 @@ import { HiMail } from "react-icons/hi";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsSuccess(false);
+    setIsError(false);
+
+    // Get values from form
+    const senderName = form.current.name.value;
+    const senderEmail = form.current.email.value;
+    const subject = form.current.subject.value;
+    const messageContent = form.current.message.value;
+
+    // Create a formatted message that includes sender info at the top
+    const formattedMessage = `
+From: ${senderName} (${senderEmail})
+Subject: ${subject}
+
+${messageContent}
+    `;
+
+    // Create template parameters object with structured data
+    const templateParams = {
+      from_name: senderName,
+      from_email: senderEmail,
+      to_name: "Arun",
+      to_email: "crarun9740@gmail.com",
+      subject: subject,
+      message: formattedMessage,
+    };
 
     emailjs
-      .sendForm("service_96wx9ab", "template_lng2jpo", form.current, {
-        publicKey: "QzoFdfuxGuCsBXmKy",
-      })
-
+      .send(
+        "service_96wx9ab",
+        "template_lng2jpo",
+        templateParams,
+        "QzoFdfuxGuCsBXmKy"
+      )
       .then(
         (result) => {
-          alert("Message sent successfully!");
+          setIsSuccess(true);
           form.current.reset();
           setIsSubmitting(false);
         },
         (error) => {
-          alert("Failed to send message: " + error.text);
+          setIsError(error.text);
           setIsSubmitting(false);
         }
       );
@@ -123,13 +153,24 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800">
             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
+            {isSuccess && (
+              <div className="bg-green-500/20 border border-green-500 text-green-300 p-4 rounded-md mb-6">
+                Your message has been sent successfully! I'll get back to you
+                soon.
+              </div>
+            )}
+            {isError && (
+              <div className="bg-red-500/20 border border-red-500 text-red-300 p-4 rounded-md mb-6">
+                Failed to send message: {isError}
+              </div>
+            )}
             <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col">
                   <label className="text-lg font-medium">Name</label>
                   <input
                     type="text"
-                    name="user_name"
+                    name="name"
                     className="mt-2 p-3 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:border-blue-500"
                     required
                   />
@@ -139,7 +180,7 @@ const Contact = () => {
                   <label className="text-lg font-medium">Email</label>
                   <input
                     type="email"
-                    name="user_email"
+                    name="email"
                     className="mt-2 p-3 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:border-blue-500"
                     required
                   />

@@ -1,5 +1,6 @@
 import React from "react";
 import Myphoto from "/assets/img-2.jpg";
+import { Link } from "react-router-dom";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -74,18 +75,16 @@ const AboutMe = () => {
               millions.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="#contact"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300"
-              >
-                Contact Me
-              </a>
-              <a
-                href="#projects"
-                className="px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-medium rounded-lg transition-colors duration-300"
-              >
-                My Projects
-              </a>
+              <Link to="/Contact">
+                <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300">
+                  Contact Me
+                </button>
+              </Link>
+              <Link to="/projects">
+                <button className="px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-medium rounded-lg transition-colors duration-300">
+                  My Projects
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>

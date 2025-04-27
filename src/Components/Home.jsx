@@ -130,7 +130,7 @@ const Home = () => {
         {/* Wave animation at bottom */}
         <WaveAnimation />
 
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center pl-20 relative z-10">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center pl-10 relative z-10">
           {/* LEFT SIDE */}
           <div className="">
             <motion.h1
