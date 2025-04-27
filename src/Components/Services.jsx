@@ -166,7 +166,7 @@ const Services = () => {
         </motion.div>
       </div>
 
-      <div className="mt-24">
+      <div className="mt-24 pl-20">
         <Icons />
       </div>
     </div>
