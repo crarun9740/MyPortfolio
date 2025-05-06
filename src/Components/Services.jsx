@@ -113,25 +113,7 @@ const Services = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-300 flex-grow">{service.description}</p>
-                <div className="mt-6 pt-4 border-t border-gray-800/50">
-                  <button className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
-                    <span>Learn more</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </button>
-                </div>
+                <div className="mt-6 pt-4 border-t border-gray-800/50"></div>
               </div>
             </motion.div>
           ))}
@@ -144,25 +126,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="mt-20 flex justify-center"
         >
-          <div className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 p-[1px] rounded-full overflow-hidden">
-            <button className="bg-gray-900 hover:bg-gray-800 text-white font-medium px-8 py-3 rounded-full transition-colors duration-300 flex items-center gap-2">
-              <span>Request Custom Service</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </button>
-          </div>
+          <div className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 p-[1px] rounded-full overflow-hidden"></div>
         </motion.div>
       </div>
 
